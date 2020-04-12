@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>14</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>364</x>
+      <y>420</y>
+      <w>196</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>Entertainment
+--
+Occurs Indoors
+Occurs Outdoors
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>266</x>
+      <y>532</y>
+      <w>294</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>Movies extends Entertainment
+--
+Title
+Year
+Star Rating
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>672</y>
+      <w>280</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Games extends Entertainment
+--
+Minimum Player Age</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>196</x>
+      <y>896</y>
+      <w>364</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>FootballGame extends Games
+--
+Home Team Name
+Away Team Name
+Home Team Score
+Away Team Score</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>196</x>
+      <y>770</y>
+      <w>364</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>BoardGame extends Games
+--
+Maximum Number of Players
+Uses a deck of cards
+Uses dice
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>812</x>
+      <y>112</y>
+      <w>406</w>
+      <h>840</h>
+    </coordinates>
+    <panel_attributes>MethodClass
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1456</x>
+      <y>112</y>
+      <w>672</w>
+      <h>448</h>
+    </coordinates>
+    <panel_attributes>Assignment notes:
+
+All types of Entertainment will require a method that says what 
+happens during that entertainment (for example: Yahtzee is a game 
+played with dice, each player takes turns trying to roll various 
+sequences of numbers).
+
+All types of Games will require a method that says where the game 
+typically is purchased and where the game is typically played
+(for example: Monopoly is a board game that is typically purchase
+from a retail store that sells board games.  You typically play Monopoly
+in your living room, game room, or kitchen table.  All games will have
+a method that would be used to make the game play (for this example, 
+just display a messaging such as “You are playing a game of football)
+
+YOU MUST DO THIS TO PASS THIS EXAM
+Print out the grading rubric and make sure you follow and 
+complete each of the different grading areas.
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>826</x>
+      <y>588</y>
+      <w>378</w>
+      <h>336</h>
+    </coordinates>
+    <panel_attributes>Menu
+--
+[1]Buy a movie
+[2]Buy a game
+[3]Enter results of a Football Game
+[4]Display all types of Entertainment 
+     (to both the screen and a text file)
+[5]Sell a board game
+[6]Display all games that are equal
+[7]Quit
+enter number for selection: (input scanner)
+
+routes user to coresponding method for 
+performing menu action.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>98</x>
+      <y>154</y>
+      <w>700</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>Constants
+--
+SalesTaxRate
+   When you sell a game, this is used to determine the sales tax amount
+   
+MaximumNoPlayers
+   When you add a new board game, you will make sure this is the maximum
+   number of possible players
+   
+MinimumPlayerAge
+   When adding a game, this is the youngest age of any player</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>196</x>
+      <y>420</y>
+      <w>196</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>50.0;100.0;10.0;100.0;10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>196</x>
+      <y>546</y>
+      <w>112</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>60.0;100.0;10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>546</x>
+      <y>672</y>
+      <w>98</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;50.0;80.0;50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>546</x>
+      <y>770</y>
+      <w>98</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;100.0;50.0;100.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>420</y>
+      <w>140</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>SimpleClass</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>560</y>
+      <w>140</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>SimpleClass</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>56</x>
+      <y>840</y>
+      <w>140</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>SimpleClass</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>56</x>
+      <y>1022</y>
+      <w>140</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>SimpleClass</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>98</x>
+      <y>112</y>
+      <w>140</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>SimpleClass</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>812</x>
+      <y>70</y>
+      <w>140</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>SimpleClass</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1484</x>
+      <y>896</y>
+      <w>140</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>/AbstractClass/
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1484</x>
+      <y>630</y>
+      <w>574</w>
+      <h>266</h>
+    </coordinates>
+    <panel_attributes>GameObjectMethods
+--
+PlayGame()   
+     this shoots text out like "playing X (inside/outside)(location)"
+
+PurchaseInfo()
+     prints typical location of purchase and typical location of play
+
+PlayInfo()
+     prints information about what happens durring play
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1484</x>
+      <y>938</y>
+      <w>574</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>MovieObjectMethods
+--
+PurchaseInfo()
+     prints typical location of purchase and typical location of play
+
+PlayInfo()
+     prints information about what happens durring play</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>826</x>
+      <y>154</y>
+      <w>266</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>Methods
+--
+BuyMovie()
+BuyGame()
+EntertainmentPrint()
+entertainmentFilePrint()
+SellBoardGame()
+FootballGameInputPoints()
+EqualGamePrint()
+menu()
+main()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>826</x>
+      <y>406</y>
+      <w>336</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>Main
+--
+initializes data
+do while loop
+sends user to menu()
+pulls object field data to close loop
+or sends user to menu again
+to exit the program
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
