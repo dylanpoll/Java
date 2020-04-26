@@ -35,16 +35,13 @@ public class emailswapper{
 		String[] array = FileEditClone.turnFileIntoArrayOfStrings(content,linesInFile);
 		System.out.println("enter 1");
 		PrintWriter pw = new PrintWriter(new FileWriter(filename));
-System.out.println("enter 1");
 			for (int i = 0; i <= array.length; i++) {
 				pw.println(Arrays.toString(array));}
-		System.out.println("enter 2");
 				try{do{System.out.println("Please enter the email address for this deployment. enter no to skip : ");
 						email = InputClass.theWord();}while(emailIsValid(email)==false);
 						String newLineContent = email;
 						pw.println(email);
 						}catch(Exception e){System.out.println("error in entering email address");}
-		System.out.println("enter 3");
 				try{System.out.println("Please enter the password for this deployment. enter no to skip : ");
 						passWord =InputClass.theWord();
 						String newLineContent = passWord;
