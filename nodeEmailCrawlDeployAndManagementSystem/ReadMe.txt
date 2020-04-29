@@ -31,4 +31,3 @@ the process builder pulls the contents in the CMD window with buffered reader, a
 it is hard codded to issue the command "node emailParser.js" in its designated directory. 
 
 ![example](https://github.com/dylanpoll/Java/blob/master/nodeEmailCrawlDeployAndManagementSystem/serverdone.png)
-Format: ![example]
