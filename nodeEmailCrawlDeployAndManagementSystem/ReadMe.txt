@@ -30,4 +30,4 @@ process builder calls CMD in this, so this is currently for Windows, but will so
 the process builder pulls the contents in the CMD window with buffered reader, and repeats them to the java program.
 it is hard codded to issue the command "node emailParser.js" in its designated directory. 
 
-![example](https://github.com/dylanpoll/Java/blob/master/nodeEmailCrawlDeployAndManagementSystem/serverdone.png?raw=true)
+![example](serverdone.png?raw=true)
