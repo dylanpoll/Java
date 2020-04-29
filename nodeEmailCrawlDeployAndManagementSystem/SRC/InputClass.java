@@ -1,4 +1,5 @@
-package emailparser;
+package emailParser;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 public class InputClass {

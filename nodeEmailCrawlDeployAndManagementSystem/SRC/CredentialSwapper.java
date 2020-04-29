@@ -1,11 +1,11 @@
-package emailparser;
+package emailParser;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class CredentialSwapper {
     public static void change(String email, String passWord) {
-        Path environmentLocation = Paths.get("emailMongo/.env").toAbsolutePath();
+        Path environmentLocation = Paths.get("emailDB/.env").toAbsolutePath();
         String file = environmentLocation.toString();
         ChangeLineInFile changeFile = new ChangeLineInFile();
 

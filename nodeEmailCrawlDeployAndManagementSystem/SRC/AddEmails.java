@@ -1,4 +1,4 @@
-package emailparser;
+package emailParser;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -10,11 +10,11 @@ import java.util.ArrayList;
 public class AddEmails {
     public static void addEmails() throws IOException {
         int end = 3, x;
-        Path environmentLocation = Paths.get("emailMongo/emailList.env").toAbsolutePath();
+        Path environmentLocation = Paths.get("emailDB/emailList.env").toAbsolutePath();
         String email, passWord, filename = environmentLocation.toString(), file = "emailList.env";
 
         //generates the arrays to work with
-        String[] listContents = ReadFileGenerateArray.listedEmails(file);
+        String[] listContents = ReadFileGenerateArray.makeArray(file);
         ArrayList<String> contents = new ArrayList<>();
         ArrayList<String> passwordArray = new ArrayList<>();
         ArrayList<String> emailArray = new ArrayList<>();

@@ -1,4 +1,4 @@
-package emailparser;
+package emailParser;
 
 import java.io.File;
 import java.io.FileReader;
@@ -8,8 +8,8 @@ import java.nio.file.Paths;
 
 public class ReadFileGenerateArray {
 
-    public static String[] listedEmails(String file){
-        Path environmentLocation = Paths.get("emailMongo/"+file).toAbsolutePath();
+    public static String[] makeArray(String file){
+        Path environmentLocation = Paths.get("emailDB/"+file).toAbsolutePath();
         String filename = environmentLocation.toString();
         String content = new String();
         content = readFile(filename);

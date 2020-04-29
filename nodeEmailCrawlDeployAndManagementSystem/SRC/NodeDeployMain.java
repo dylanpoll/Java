@@ -1,4 +1,4 @@
-package emailparser;
+package emailParser;
 
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
@@ -9,7 +9,7 @@ public class NodeDeployMain {
             int wholeNumber=0;
             try {
                 String file = "emailList.env";
-                String[] listContents = ReadFileGenerateArray.listedEmails(file);
+                String[] listContents = ReadFileGenerateArray.makeArray(file);
                 ArrayList<String> contents = new ArrayList<>();
                 ArrayList<String> emailArray = new ArrayList<>();
                 int amountOfEmails = ((listContents.length) / 2);
@@ -26,7 +26,6 @@ public class NodeDeployMain {
                 System.out.println("-----------------------------end of list------------------------");
 
             }catch(Exception e){System.out.println("error at boot...");}
-
 
             System.out.println("----------------------configuration menu------------------------");
             System.out.println("update your database key: 		 [1]");
@@ -56,7 +55,7 @@ public class NodeDeployMain {
 
             try {
                 String file = "emailList.env";
-                            String[] listContents = ReadFileGenerateArray.listedEmails(file);
+                            String[] listContents = ReadFileGenerateArray.makeArray(file);
                         ArrayList<String> contents = new ArrayList<>();
                         ArrayList<String> passwordArray = new ArrayList<>();
                         ArrayList<String> emailArray = new ArrayList<>();
@@ -79,6 +78,13 @@ public class NodeDeployMain {
                 do {
                     try {
                         do {
+                            ArrayList<String> terms = SearchTermArrayGenerator.makeTermArray();//regenerates the terms list
+                            System.out.println("-------------Printing out current list of search terms----------");
+                            for (int i=0;i<terms.size();i++) {
+                                System.out.print("Term number "+(i+1)+" : ");
+                                System.out.println(terms.get(i));}//list length -0 for array bounds, .length is the objects in the array, but it starts at 0
+                            System.out.println("-----------------------------end of list------------------------");
+
                             for (int i = 0; i <= amountOfEmails - 1; i++) {// divded by 2 because this array has the email and pass on seperate lines, so the amount of addresses is half the length.
                                 String email = emailArray.get(i);
                                 if (i == 0) {

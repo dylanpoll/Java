@@ -1,4 +1,4 @@
-package emailparser;
+package emailParser;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -9,14 +9,14 @@ import java.util.ArrayList;
 
 public class RemoveEmails {
     public static void removeEmail() throws IOException {
-        Path environmentLocation = Paths.get("emailMongo/emailList.env").toAbsolutePath();
+        Path environmentLocation = Paths.get("emailDB/emailList.env").toAbsolutePath();
 
         int end = 3,index = -1;
 
         String filename = environmentLocation.toString(),file = "emailList.env";
 
         //generates the arrays to work with
-        String[] listContents = ReadFileGenerateArray.listedEmails(file);
+        String[] listContents = ReadFileGenerateArray.makeArray(file);
         ArrayList<String> contents = new ArrayList<>();
         ArrayList<String> passwordArray = new ArrayList<>();
         ArrayList<String> emailArray = new ArrayList<>();

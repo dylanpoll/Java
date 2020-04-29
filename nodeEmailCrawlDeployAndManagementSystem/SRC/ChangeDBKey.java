@@ -1,11 +1,12 @@
-package emailparser;
+package emailParser;
+
 import java.nio.file.Path;
 import java.nio.file.Paths;
 public class ChangeDBKey {
         public static void change() {
-            Path environmentLocation = Paths.get("emailMongo/.env").toAbsolutePath();
+            Path environmentLocation = Paths.get("emailDB/.env").toAbsolutePath();
             String file = environmentLocation.toString(),filename = ".env";
-            String[] array = ReadFileGenerateArray.listedEmails(filename);
+            String[] array = ReadFileGenerateArray.makeArray(filename);
             String dbconnector = array[0].replaceAll("\\r|\\n", "");
 
             System.out.println("-------------YOUR CURRENT DB KEY----------------");
