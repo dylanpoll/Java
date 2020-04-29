@@ -1,3 +1,5 @@
+so far.... 767 lines of code.
+
 This is a managment system to deploy a node.js bot.
 
 the node bot in use is a email crawler that checks for keywords, this does not include the node.js bot.
