@@ -29,5 +29,8 @@ to the needed files.
 process builder calls CMD in this, so this is currently for Windows, but will soon be ported over to shell for use on linux. 
 the process builder pulls the contents in the CMD window with buffered reader, and repeats them to the java program.
 it is hard codded to issue the command "node emailParser.js" in its designated directory. 
+
+it also reads a json file generated from a node.js bot that pulls collection documents from a mongo database and strips them down to just the string values and places them into a .env file for easier access.
+
 markdown
 ![example](https://github.com/dylanpoll/Java/blob/master/nodeEmailCrawlDeployAndManagementSystem/serverdone.png?raw=true)
