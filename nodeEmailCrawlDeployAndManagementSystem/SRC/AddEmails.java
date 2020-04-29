@@ -8,7 +8,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class AddEmails {
-    public static void addemails() throws IOException {
+    public static void addEmails() throws IOException {
         int end = 3, x;
         Path environmentLocation = Paths.get("emailMongo/emailList.env").toAbsolutePath();
         String email, passWord, filename = environmentLocation.toString(), file = "emailList.env";
@@ -21,26 +21,13 @@ public class AddEmails {
 
         int amountOfEmails = ((listContents.length) / 2);
 
-        for (int i = 1; i < listContents.length; i++) {
-            listContents[i] = listContents[i].replaceAll("\\r|\\n", "");
-            if (!listContents[i].isEmpty()) {//isEmpty returns true if the length of the string in it is 0. so if it is "" it will not write it to the arrays
-                contents.add(listContents[i]);
-            }
-        }//list length -0 for array bounds, .length is the objects in the array, but it starts at 0
+        for (int i=0;i<listContents.length;i++){listContents[i] = listContents[i].replaceAll("\\r|\\n", "");    //isEmpty returns true if the length of the string in it is 0. so if it is "" it will not write it to the arrays
+            if(!listContents[i].isEmpty()){contents.add(listContents[i]);}}                                                 //list length -0 for array bounds, .length is the objects in the array, but it starts at 0
 
-        for (int i = 1; i < listContents.length; i += 2) {
-            passwordArray.add(contents.get(i));
-        }//list length -0 for array bounds, .length is the objects in the array, but it starts at 0
+        //starts on line 1 because it is line 2 and that holds the first password
+        for (int i=1;i<listContents.length;i+=2) {passwordArray.add(contents.get(i));}//list length -0 for array bounds, .length is the objects in the array, but it starts at 0
 
-        for (int i = 0; i < listContents.length; i += 2) {
-            emailArray.add(contents.get(i));
-        }//list length -0 for array bounds, .length is the objects in the array, but it starts at 0
-
-        for (int i = 0; i < listContents.length; i += 2) {
-            if (!listContents[i].isEmpty()) {//isEmpty returns true if the length of the string in it is 0. so if it is "" it will not write it to the arrays
-                emailArray.add(listContents[i]);
-            }
-        }
+        for (int i=0;i<listContents.length;i+=2) {if(!listContents[i].isEmpty()){emailArray.add(listContents[i]);}}//isEmpty returns true if the length of the string in it is 0. so if it is "" it will not write it to the arrays
 
 
         System.out.println("-------------Printing out current list of emails----------------");
@@ -51,7 +38,7 @@ public class AddEmails {
         System.out.println("-----------------------------end of list------------------------");
 
         try {
-            System.out.println(" enter 0 if you do not want to delete any emails..otherwise type in any other number : ");
+            System.out.println(" enter 0 if you do not want to add new any emails..otherwise type in any other number : ");
             end = InputClass.inputInt();
         } catch (Exception e) {
             System.out.println("error in entering email address");
@@ -85,7 +72,7 @@ public class AddEmails {
                                 passwordArray.remove(i);}}
 
             PrintWriter pw = new PrintWriter(new FileWriter(filename));
-            for (int i = 0; i < amountOfEmails; i++) {//writes all the values over to the file from scratch one by one.
+            for (int i=0;i<emailArray.size();i++) {//writes all the values over to the file from scratch one by one.
                 pw.println(emailArray.get(i));
                 pw.println(passwordArray.get(i));
                 //this makes it so it doesn't leave a blank spot at the end of the file
