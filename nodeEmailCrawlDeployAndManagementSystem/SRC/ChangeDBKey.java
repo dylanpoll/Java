@@ -1,4 +1,4 @@
-package emailParser;
+package Deployer;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;

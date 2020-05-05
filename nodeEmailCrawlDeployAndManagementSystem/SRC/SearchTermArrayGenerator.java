@@ -1,4 +1,4 @@
-package emailParser;
+package Deployer;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -62,10 +62,10 @@ public class SearchTermArrayGenerator {
             termsArray.add(contents.get(i));}//writes all the terms to the terms array
 
         PrintWriter pw = new PrintWriter(new FileWriter(filename));
-        for (int i = 0; i < termsArray.size(); i++) {//writes all the values over to the file from scratch one by one.
+        for (int i = 0; i < termsArray.size()-1; i++) {//writes all the values over to the file from scratch one by one.
             pw.println(termsArray.get(i));}//this makes it so it doesn't leave a blank spot at the end of the file reprints the old text file contents line by line.
+        pw.print(termsArray.get(termsArray.size()-1));//prints last line without creating a new line at end
         pw.close();
     return termsArray;
     }//end of method
 }//end of class
-

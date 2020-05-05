@@ -1,10 +1,11 @@
-package emailParser;
+package Deployer;
 
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 public class NodeDeployMain {
     public static void main(String[] args) {
+        String word;
         do{
             int wholeNumber=0;
             try {
@@ -77,7 +78,8 @@ public class NodeDeployMain {
 
                 do {
                     try {
-                        do {
+                        do {//i setup process builder to run a "command" and "word", in this case the command is node and we call getTerms.js but it could by python thing.py etc.
+                            processbuilder.deployNode("node","getTerms.js");//deploys the node file
                             ArrayList<String> terms = SearchTermArrayGenerator.makeTermArray();//regenerates the terms list
                             System.out.println("-------------Printing out current list of search terms----------");
                             for (int i=0;i<terms.size();i++) {
@@ -94,7 +96,7 @@ public class NodeDeployMain {
                                 }
                                 String passWord = passwordArray.get(i);
                                 CredentialSwapper.change(email, passWord);//swaps out the email credentials.
-                                processbuilder.deployNode();//deploys the node file
+                                processbuilder.deployNode("node","emailConnect.js");//deploys the node file
                                 System.out.println(i);
                             }
                             int x = 5;

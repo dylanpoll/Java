@@ -1,4 +1,4 @@
-package emailParser;
+package Deployer;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -71,11 +71,11 @@ public class AddEmails {
                             if (passwordArray.get(i).equals("")) {
                                 passwordArray.remove(i);}}
 
-            PrintWriter pw = new PrintWriter(new FileWriter(filename));
-            for (int i=0;i<emailArray.size();i++) {//writes all the values over to the file from scratch one by one.
-                pw.println(emailArray.get(i));
-                pw.println(passwordArray.get(i));
-                //this makes it so it doesn't leave a blank spot at the end of the file
+                PrintWriter pw = new PrintWriter(new FileWriter(filename));
+                for (int i=0;i<emailArray.size();i++) {//writes all the values over to the file from scratch one by one.
+                    pw.println(emailArray.get(i));
+                    pw.println(passwordArray.get(i));
+                    //this makes it so it doesn't leave a blank spot at the end of the file
             }//reprints the old text file contents line by line.
             pw.close();
         }

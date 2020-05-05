@@ -1,4 +1,4 @@
-package emailParser;
+package Deployer;
 
 import java.io.BufferedReader;
         import java.io.IOException;
@@ -8,11 +8,11 @@ import java.io.BufferedReader;
         import java.nio.file.Paths;
 
 public class processbuilder{
-    public static void deployNode()throws IOException{
+    public static void deployNode(String command,String word)throws IOException{
         Path mydir=Paths.get("emailDB").toAbsolutePath();// this pulls the workdirectory and adds \emailMongo at the end
         ProcessBuilder processBuilder = new ProcessBuilder();
         processBuilder.directory(new File(String.valueOf(mydir)));// this sets the directory for CMD to mydir
-        processBuilder.command("node", "emailParser.js");//loads the command buffer for cmd with the command
+        processBuilder.command(command, word);//loads the command buffer for cmd with the command
             try {
                     Process process = processBuilder.start();//runs the "command" in cmd
 

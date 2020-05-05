@@ -1,4 +1,4 @@
-package emailParser;
+package Deployer;
 
 import java.io.File;
 import java.io.FileReader;
@@ -43,36 +43,28 @@ public class ReadFileGenerateArray {
         int startIndext = 0;
         int lastIndex = content.length() - 1;
         while (true) {
-
             if (content.charAt(index) == '\n') {
                 tempInt++;
-
                 String temp2 = new String();
                 for (int i = 0; i < index - startIndext; i++) {
                     temp2 += content.charAt(startIndext + i);
                 }
                 startIndext = index;
                 array[tempInt - 1] = temp2;
-
             }
-
             if (index == lastIndex) {
-
                 tempInt++;
-
                 String temp2 = new String();
                 for (int i = 0; i < index - startIndext + 1; i++) {
                     temp2 += content.charAt(startIndext + i);
-                }
+                    }
                 array[tempInt - 1] = temp2;
-
                 break;
             }
             index++;
         }
         return array;
     }
-
     private static String readFile(String filename) {
         String content = null;
         File file = new File(filename);

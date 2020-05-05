@@ -1,4 +1,4 @@
-package emailParser;
+package Deployer;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -149,4 +149,3 @@ public class ChangeLineInFile {
             return content;
         }
 }
-

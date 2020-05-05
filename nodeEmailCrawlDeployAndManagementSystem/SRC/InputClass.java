@@ -1,4 +1,4 @@
-package emailParser;
+package Deployer;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -41,15 +41,15 @@ public class InputClass {
                 do {
                     i=1;
                     word = input.nextLine();
-                    if(verifyword(word)==true){
-                        x=1;
+                        if(verifyword(word)==true){
+                            x=1;
+                            }
+                    }while(x==0);
+                }catch(Exception e){
+                    System.out.println("Invalid input, try again: ");
+                    i=0;
                     }
-                }while(x==0);
-            }catch(Exception e){
-                System.out.println("Invalid input, try again: ");
-                i=0;
-            }
-        }while(i==0);
+            }while(i==0);
         return word;
     }
     //---numbers
