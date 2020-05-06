@@ -1,3 +1,9 @@
+UPDATE.added:
+rest API(express)
+a self setup system is being installed(java will install or start the installs for postman, node, and all modules)
+
+
+---------------------
 so far.... 767 lines of code.
 
 This is a managment system to deploy a node.js bot.
