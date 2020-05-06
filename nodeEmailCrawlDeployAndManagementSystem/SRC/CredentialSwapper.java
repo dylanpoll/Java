@@ -1,11 +1,11 @@
-package Deployer;
+package nodeDeployment;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class CredentialSwapper {
     public static void change(String email, String passWord) {
-        Path environmentLocation = Paths.get("emailDB/.env").toAbsolutePath();
+        Path environmentLocation = Paths.get("Node/.env").toAbsolutePath();
         String file = environmentLocation.toString();
         ChangeLineInFile changeFile = new ChangeLineInFile();
 

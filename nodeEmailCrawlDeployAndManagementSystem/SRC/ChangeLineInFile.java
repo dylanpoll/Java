@@ -1,4 +1,4 @@
-package Deployer;
+package nodeDeployment;
 
 import java.io.BufferedWriter;
 import java.io.File;

@@ -1,4 +1,4 @@
-package Deployer;
+package nodeDeployment;
 
 import java.io.FileWriter;
 import java.io.IOException;
