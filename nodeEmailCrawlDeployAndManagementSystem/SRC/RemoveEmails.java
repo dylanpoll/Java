@@ -1,4 +1,4 @@
-package nodeDeployment;
+package Deployer;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class RemoveEmails {
     public static void removeEmail() throws IOException {
-        Path environmentLocation = Paths.get("Node/emailList.env").toAbsolutePath();
+        Path environmentLocation = Paths.get("emailDB/emailList.env").toAbsolutePath();
 
         int end = 3,index = -1;
 

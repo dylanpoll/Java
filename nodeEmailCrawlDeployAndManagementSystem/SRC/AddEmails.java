@@ -1,4 +1,4 @@
-package nodeDeployment;
+package Deployer;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class AddEmails {
     public static void addEmails() throws IOException {
         int end = 3, x;
-        Path environmentLocation = Paths.get("Node/emailList.env").toAbsolutePath();
+        Path environmentLocation = Paths.get("emailDB/emailList.env").toAbsolutePath();
         String email, passWord, filename = environmentLocation.toString(), file = "emailList.env";
 
         //generates the arrays to work with

@@ -1,4 +1,4 @@
-package nodeDeployment;
+package Deployer;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

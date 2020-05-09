@@ -1,4 +1,4 @@
-package nodeDeployment;
+package Deployer;
 
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
@@ -32,8 +32,7 @@ public class NodeDeployMain {
             System.out.println("update your database key: 		 [1]");
             System.out.println("add additional email addresses : [2]");
             System.out.println("remove email addresses : 		 [3]");
-            System.out.println("install core features : 		 [4]");
-            System.out.println("exit configuration menu : 		 [5]");
+            System.out.println("exit configuration menu : 		 [4]");
             System.out.println("----------------------------------------------------------------");
             System.out.print("enter numeric menu choice : ");
             do{
@@ -50,13 +49,10 @@ public class NodeDeployMain {
                             RemoveEmails.removeEmail();
                             main(args);
                         case 4:
-                            Install.installSelection();
-                            main(args);
-                        case 5:
                             break;
                     }//end switch
                 }catch(Exception e){System.out.println("error with choice, re enter : ");}
-            }while(wholeNumber!=5);
+            }while(wholeNumber!=4);
 
             try {
                 String file = "emailList.env";
@@ -80,13 +76,6 @@ public class NodeDeployMain {
                     System.out.println(emailArray.get(i));}//list length -0 for array bounds, .length is the objects in the array, but it starts at 0
                 System.out.println("-----------------------------end of list------------------------");
 
-                //deploy rest API
-                            try{
-                                processbuilder.deployNode("nodemon","rest.js");//deploys the node file
-                            }catch (Exception e){
-                                System.out.println("error loading Rest API.");
-                            }
-//-----main loop
                 do {
                     try {
                         do {//i setup process builder to run a "command" and "word", in this case the command is node and we call getTerms.js but it could by python thing.py etc.
