@@ -1,8 +1,0 @@
-plans for gambling game
-
-make it save game data
-	.txt the gets written at the end
-	.txt gets read at startup
-make the new slot and player field passcoded
-
-make new users made randomely
