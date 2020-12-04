@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <help_text/>
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>387</x>
+      <y>117</y>
+      <w>414</w>
+      <h>486</h>
+    </coordinates>
+    <panel_attributes>::RunTimeData
+--
+-totalAmountOfPlayers: int
+-totalAmountOfMachines: int
+-machineArray: ArrayList&lt;SlotMachine&gt;
+-playerArray: ArrayList&lt;Player&gt;
+-jackpotWon: boolean
+-payoutWon: boolean
+-todaysDate: Date
+-selectedSlot: SlotMachine
+-firstStart: boolean
+-RunTime: RunTimeData
+--
++RunTimeData(int totalAmountOfPlayers, int totalAmountOfMachines, ArrayList&lt;SlotMachine&gt; machineArray, ArrayList&lt;Player&gt; playerArray, boolean jackpotWon, boolean payoutWon, Date todaysDate, SlotMachine selectedSlot, boolean firstStart, RunTimeData RunTime): ctor
++setFirstStart(boolean firstStart): void
++setSelectedSlot(SlotMachine selectedSlot): void
++setTotalAmountOfPlayers(int totalAmountOfPlayers): void
++setTotalAmountOfMachines(int totalAmountOfMachines): void
++setMachineArray(ArrayList&lt;SlotMachine&gt; machineArray): void
++setPlayerArray(ArrayList&lt;Player&gt; playerArray): void
++setJackpotWon(boolean jackpotWon): void
++setPayoutWon(boolean payoutWon): void
++setTodaysDate(Date todaysDate): void
++setRunTime(RunTimeData RunTime): void
++getRunTime(): RunTimeData
++getMachineArray(): ArrayList&lt;SlotMachine&gt;
++getPlayerArray(): ArrayList&lt;Player&gt;
++isJackpotWon(): boolean
++isPayoutWon(): boolean
++getTodaysDate(): Date
++getTotalAmountOfPlayers(): int
++getTotalAmountOfMachines(): int
++getSelectedSlot(): SlotMachine
++isFirstStart(): boolean
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>801</x>
+      <y>189</y>
+      <w>405</w>
+      <h>414</h>
+    </coordinates>
+    <panel_attributes>::SlotMachine
+--
+-build: boolean
+-funds: double
+-jackpotOdds: int
+-payoutOdds: int
+-payout: double
+-jackpotPayout: double
+-cost: double
+-machineName: String
+--
++SlotMachine(boolean build, double funds, int jackpotOdds, int payoutOdds, double payout, double jackpotPayout, double cost, String machineName): ctor
++setPayout(double payout): void
++setJackpotPayout(double jackpotPayout): void
++setCost(double cost): void
++setMachineName(String machineName): void
++setFunds(double funds): void
++setJackpotOdds(int jackpotOdds): void
++setPayoutOdds(int payoutOdds): void
++setBuild(boolean build): void
++getFunds(): double
++getJackpotOdds(): int
++getPayoutOdds(): int
++getPayout(): double
++getJackpotPayout(): double
++getCost(): double
++getMachineName(): String
++isBuild(): boolean
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1206</x>
+      <y>360</y>
+      <w>297</w>
+      <h>243</h>
+    </coordinates>
+    <panel_attributes>::Date
+--
+-day: int
+-month: int
+-year: int
+--
++Date(): ctor
++Date(int day, int month, int year): ctor
++addDate(): void
++getDay(): int
++getYear(): int
++getMonth(): int
++setMonth(int month): void
++setDay(int day): void
++setYear(int year): void
++validateDate(int year, int month, int day): boolean
++monthDays(int month, boolean leapYear): int
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>630</x>
+      <y>918</y>
+      <w>315</w>
+      <h>279</h>
+    </coordinates>
+    <panel_attributes>::Name
+--
+-buildName: boolean
+-firstName: String
+-middleInitial: char
+-lastName: String
+--
++Name(boolean buildName, String firstName, char middleInitial, String lastName): ctor
++setFirstName(String firstName): void
++setMiddleInitial(char middleInitial): void
++setLastName(String lastName): void
++toSentenceCase(String inputString): String
++getLastName(): String
++getMiddleInitial(): char
++getFirstName(): String
++toString(): String
++isBuildName(): boolean
++setBuildName(boolean buildName): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1053</x>
+      <y>891</y>
+      <w>351</w>
+      <h>279</h>
+    </coordinates>
+    <panel_attributes>::Player
+--
+-build: boolean
+-dob: Date
+-legalAge: boolean
+-moneyBalance: double
+--
++Player(boolean buildName, String firstName, char middleInitial, String lastName, boolean build, Date dob, boolean legalAge, double moneyBalance): ctor
++getLegalAge(): boolean
++getDob(): Date
++getMoneyBalance(): double
++setDob(Date dob): void
++setMoneyBalance(double moneyBalance): void
++setlegalAge(boolean legalAge): void
++buildSetlegalAge(boolean legalAge): void
++toString(): String
++isBuild(): boolean
++setBuild(boolean build): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>945</x>
+      <y>648</y>
+      <w>261</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>::DataValidation
+--
+~input = new Scanner(System.in): Scanner
+--
++validateChar(String string): char
++validateDouble(String string): double
++validateInt(String string): int
+-verifyword(String word): boolean
++theWord(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>468</x>
+      <y>747</y>
+      <w>171</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>::TestClass
+--
+--
++firstRun(): void
++buildingSlotMachine(): void
++buildingPlayer(): void
++oddsCheck(): void
++runGame(): void
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1215</x>
+      <y>594</y>
+      <w>153</w>
+      <h>315</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>150.0;10.0;10.0;330.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>612</x>
+      <y>765</y>
+      <w>351</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;100.0;370.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1197</x>
+      <y>594</y>
+      <w>36</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;70.0;20.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1197</x>
+      <y>774</y>
+      <w>126</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>576</x>
+      <y>765</y>
+      <w>378</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;80.0;400.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>918</x>
+      <y>774</y>
+      <w>90</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>468</x>
+      <y>585</y>
+      <w>117</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>621</x>
+      <y>594</y>
+      <w>216</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;220.0;220.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>558</x>
+      <y>567</y>
+      <w>288</w>
+      <h>225</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;230.0;300.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>594</x>
+      <y>801</y>
+      <w>486</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;10.0;520.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>378</x>
+      <y>792</y>
+      <w>90</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>methodsClass</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>990</x>
+      <y>234</y>
+      <w>189</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>_object: Class_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1287</x>
+      <y>387</y>
+      <w>189</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>_object: Class_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>747</x>
+      <y>963</y>
+      <w>189</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>_object: Class_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1188</x>
+      <y>927</y>
+      <w>189</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>_object: Class_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>945</x>
+      <y>765</y>
+      <w>324</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>for taking user inputs and checking if correct data type
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>594</x>
+      <y>207</y>
+      <w>162</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>RunTimeEnvironment 
+class</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
