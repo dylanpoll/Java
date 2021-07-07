@@ -7,7 +7,7 @@
 public class TestClass {
 
 public static void main(String[] args){
-	// all the objects created below have a abstract parent class of athlete, and athlese has a abstract parent class person.
+	// all the objects created below have a abstract parent class of athlete, and athlete has a abstract parent class person.
 //first four slots for person + athlete are :String name, int age, String team, String position-sport
 	BaseballPlayer Hank = new BaseballPlayer("Hank Williams", 33, "Mets", "Pitcher", " left handed");
 	System.out.print(Hank.toString());
