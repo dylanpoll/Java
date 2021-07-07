@@ -1,4 +1,4 @@
-#update
+# update
 I made this before I knew what docker was. I feel like thats all that really needs to be said here... it accomplishes the same goal of making sure my node bots re launch if they ever do crash, but in a much less ideal and reliable way. it also does some of the most redundant json manipulation as I did not know about json libraries/modules existing at the time of originally making this so I handles json manually.
 
 I honestly only keep this up to remember where I started.. but this is true for other repos.
