@@ -2,3 +2,5 @@ This is one of the real crazy rides from when I was first learning java.
 There is so much to point out here I don't even know where to start so there is without a doubt no defence. 
 
 Does it work? yes.. But when you see how and what I did from a lack of knowing about the tools out there... take for example the entire application gets its core assets loaded by a try catch with a known null pointer error and every method is a void in the entire application.
+
+Oh and the odds for the innitial assets and the funds for the player where assigned values to use for them in the rubric for the class I was taking, I think my proffessor was trying to drive home that gambling is bad and you will lose all your money..
